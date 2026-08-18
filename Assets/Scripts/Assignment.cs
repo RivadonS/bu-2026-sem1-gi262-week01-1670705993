@@ -21,26 +21,33 @@ public class Assignment : MonoBehaviour
     public int as01Number;
     public void As01_CheckNumberSign()
     {
-        /*if (as01Number > 0) Debug.Log("Positive");
+        if (as01Number > 0) Debug.Log("Positive");
         else if (as01Number < 0) Debug.Log("Negative");
-        else Debug.Log("Zero");*/
+        else Debug.Log("Zero");
     }
 
     public int as02Day;
     public void As02_GetDayName()
     {
-        // TODO: Implement logic to return day name
-        // Example: Debug.Log("Monday");
-        throw new System.NotImplementedException();
+        switch (as02Day)
+        {
+            case 1: Debug.Log("Monday"); break;
+            case 2: Debug.Log("Tuesday"); break;
+            case 3: Debug.Log("Wednesday"); break;
+            case 4: Debug.Log("Thursday"); break;
+            case 5: Debug.Log("Friday"); break;
+            case 6: Debug.Log("Saturday"); break;
+            case 7: Debug.Log("Tuesday"); break;
+            default: Debug.Log("Invalid day"); break;
+        }
     }
 
     public string as03InputPassword;
     public string as03CorrectPassword;
     public void As03_ValidatePassword()
     {
-        // TODO: Implement password validation logic
-        // Example: Debug.Log("True");
-        throw new System.NotImplementedException();
+        if (as03InputPassword == as03CorrectPassword) Debug.Log("True");
+        else Debug.Log("False");
     }
 
     public int as04Score;
