@@ -53,17 +53,24 @@ public class Assignment : MonoBehaviour
     public int as04Score;
     public void As04_GetGrade()
     {
-        // TODO: Implement logic to return grade
-        // Example: Debug.Log("A");
-        throw new System.NotImplementedException();
+        if (as04Score >= 80) Debug.Log("A");
+        else if (as04Score >= 70) Debug.Log("B");
+        else if (as04Score >= 60) Debug.Log("C");
+        else if (as04Score >= 50) Debug.Log("D");
+        else Debug.Log("F");
     }
 
     public int as05Year;
     public void As05_IsLeapYear()
     {
-        // TODO: Implement leap year check logic
-        // Example: Debug.Log("True");
-        throw new System.NotImplementedException();
+        if (as05Year % 4 == 0 || as05Year % 100 != 0 || as05Year % 400 == 0)
+        {
+            Debug.Log("True");
+        }
+        else
+        {
+            Debug.Log("False");
+        }
     }
 
     public double as06Num1;
@@ -71,17 +78,51 @@ public class Assignment : MonoBehaviour
     public double as06Num2;
     public void As06_Calculate()
     {
-        // TODO: Implement calculator logic
-        // Example: Debug.Log("Result: 42");
-        throw new System.NotImplementedException();
+        switch (as06Op)
+        {
+            case '+':
+                Debug.Log(as06Num1 + as06Num2); break;
+            case '-':
+                Debug.Log(as06Num1 - as06Num2); break;
+            case '*':
+                Debug.Log(as06Num1 * as06Num2); break;
+            case '/':
+                if (as06Num2 != 0)
+                    Debug.Log(as06Num1 / as06Num2);
+                else
+                    Debug.Log("Error: Division by zero"); break;
+            default:
+                Debug.Log("Invalid operator"); break;
+        }
     }
 
     public int as07Month;
     public void As07_GetSeason()
     {
-        // TODO: Implement logic to return season
-        // Example: Debug.Log("Summer");
-        throw new System.NotImplementedException();
+        if ((as07Month >= 1) && (as07Month <= 12))
+        {
+            if ((as07Month == 12) || (as07Month == 1) || (as07Month == 2))
+            {
+                Debug.Log("Winter");
+            }
+            else if ((as07Month >= 3) && (as07Month <= 5))
+            {
+                Debug.Log("Spring");
+            }
+            else if ((as07Month >= 6) && (as07Month <= 8))
+            {
+                Debug.Log("Summer");
+            }
+            else if ((as07Month >= 9) && (as07Month <= 11))
+            {
+                Debug.Log("Autumn");
+            }
+
+        }
+        else
+        {
+            Debug.Log("Invalid month");
+        }
     }
 
     public int as08Quantity;
