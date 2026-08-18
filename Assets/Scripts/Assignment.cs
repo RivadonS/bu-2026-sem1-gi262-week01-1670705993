@@ -21,9 +21,9 @@ public class Assignment : MonoBehaviour
     public int as01Number;
     public void As01_CheckNumberSign()
     {
-        // TODO: Implement logic to determine sign
-        // Example: Debug.Log("Positive");
-        throw new System.NotImplementedException();
+        /*if (as01Number > 0) Debug.Log("Positive");
+        else if (as01Number < 0) Debug.Log("Negative");
+        else Debug.Log("Zero");*/
     }
 
     public int as02Day;
